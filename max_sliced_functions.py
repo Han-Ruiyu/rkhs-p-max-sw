@@ -135,11 +135,11 @@ def expected_max_swdistance_empirical(distribution, sigma, d, N, p, n_montecarlo
     Compute the expection of p-max-sliced Wasserstein distance
     between empirical measure and the target measure
     
-    If sample from uniform or Gaussian, it computes the distance between 
+    If sample from Gaussian, it computes the distance between 
     the empirical measure and true measure (the true measure is also 
                                             discretized, though...)
     
-    If sample from Pareto, it computes the distance between two
+    If sample from uniform or Pareto, it computes the distance between two
     empirical measure, where the target distribution is the product 
     measure of indenpendent 1-dimensional Pareto distribution
 
@@ -182,7 +182,7 @@ def expected_max_swdistance_empirical(distribution, sigma, d, N, p, n_montecarlo
             
             points2=sigma*(-1+2*np.random.rand(N,d))
             
-            max_sw_temp=max_sw_temp=max_swdistance_empirical(points1,points2,N, p)
+            max_sw_temp=max_swdistance_empirical(points1,points2,N, p)
             s+= max_sw_temp
         
         
@@ -192,6 +192,7 @@ def expected_max_swdistance_empirical(distribution, sigma, d, N, p, n_montecarlo
             points1=sigma*np.random.randn(N,d)
             #if want the distance between two empirical measure
             #points2=sigma*np.random.randn(N,d)
+            #max_sw_temp=max_swdistance_empirical(points1,points2,N, p)
             
             max_sw_temp=max_swdistance_empirical_Gaussian(points1,sigma,N, p)
             s+= max_sw_temp 
