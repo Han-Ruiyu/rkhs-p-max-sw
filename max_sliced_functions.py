@@ -179,9 +179,8 @@ def expected_max_swdistance_empirical(distribution, sigma, d, N, p, n_montecarlo
             points1=sigma*(-1+2*np.random.rand(N,d))
         
             
-            points2=np.linspace(-sigma,sigma,N)
-            #if want the distance between two empirical measure
-            #points2=sigma*(-1+2*np.random.rand(N,d))
+            
+            points2=sigma*(-1+2*np.random.rand(N,d))
             
             max_sw_temp=max_sw_temp=max_swdistance_empirical(points1,points2,N, p)
             s+= max_sw_temp
