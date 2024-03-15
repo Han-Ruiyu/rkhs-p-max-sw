@@ -28,7 +28,7 @@ for i in range(5):
     print("Runtime for "+str(num) +" samples:"+ str((stop - start) / 60.0) + " min.\n")
 
 # if want to plot log-log
-#plt.plot(np.log(number_of_points), np.log(max_sw_distance))
+#plt.loglog(number_of_points, max_sw_distance)
 
 # plotting parameters
 plt.plot(number_of_points, max_sw_distance)
