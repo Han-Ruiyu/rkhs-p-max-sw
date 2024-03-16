@@ -8,4 +8,6 @@ plg_experiment_Rd.py: for experiments of distribution defined on R^d
 For experiments, if you want to enlarge the dimension of distributions, the corresponding number of tested direction should also be enlarged. 
 This is the variable "L" in max_sliced_functions.py.
 
+In the RKHS embedding experiment, when the true distribution is Gaussian, the code is unstable when the variance of Gaussian is small and d_test is large.
+
 For specific functions, see the commments with each individual one.
